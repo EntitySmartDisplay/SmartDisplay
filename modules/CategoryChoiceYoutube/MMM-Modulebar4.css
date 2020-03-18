@@ -1,0 +1,75 @@
+/*****************************************************
+ * Magic Mirror 2                                    *
+ * Custom CSS for MMM-modulebar                      *
+ *                                                   *
+ * By Erik Pettersson                                *
+ * Based on the TouchNavigation CSS by Brian Janssen *
+ * MIT Licensed.                                     *
+ *                                                   *
+ *****************************************************/
+.modulebar-menu {
+    display: flex;
+    align-items: stretch;
+}
+
+/* add default color for animation start  */
+  
+  
+  /* toggle this class */
+  
+  .color-bg-start {
+    background-color: rgb(140, 200, 255);
+  }
+  
+  
+  /* toggle class bg-animate-color */
+  
+  .bg-animate-color {
+    animation: random-bg .5s linear infinite ;
+  }
+  
+  
+  /* add animation to bg color  */
+  
+  @keyframes random-bg {
+    from {
+      filter: hue-rotate(0);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .modulebar-button {
+    /* change bg color to get different hues    */
+    
+    color: white;
+    border: none;
+    transition: all .3s ease;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+    font-size:35px;
+    text-align:center;
+    margin-top:20px;
+  }
+  
+  
+  .modulebar-button:active {
+    animation: random-bg .5s linear , grow 1300ms ease ;
+  }
+
+
+.modulebar-picture {
+    margin: 1px 1px;
+/*    width: 60px;*/
+/*    height: 60px;*/
+}
+
+.modulebar-text {
+    margin: -5px 0;
+}
